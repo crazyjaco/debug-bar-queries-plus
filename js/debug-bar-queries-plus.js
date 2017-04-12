@@ -8,7 +8,7 @@
 		//sortBy.addEventListener('change', function(event){console.log(event);}, false);
 
 		var elapsedSort = function(a, b){
-			console.log('a', parseFloat(a.dataset.ms_elapsed), 'b', parseFloat(b.dataset.ms_elapsed));
+			//console.log('a', parseFloat(a.dataset.ms_elapsed), 'b', parseFloat(b.dataset.ms_elapsed));
 			if(parseFloat(a.dataset.ms_elapsed)  < parseFloat(b.dataset.ms_elapsed)) {
 				return 1;
 			}
