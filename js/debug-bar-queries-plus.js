@@ -8,11 +8,11 @@
 		//sortBy.addEventListener('change', function(event){console.log(event);}, false);
 
 		var elapsedSort = function(a, b){
-			console.log('a', a.dataset.ms_elapsed, 'b', b.dataset.ms_elapsed);
-			if(a.dataset.ms_elapsed < b.dataset.ms_elapsed) {
+			console.log('a', parseFloat(a.dataset.ms_elapsed), 'b', parseFloat(b.dataset.ms_elapsed));
+			if(parseFloat(a.dataset.ms_elapsed)  < parseFloat(b.dataset.ms_elapsed)) {
 				return 1;
 			}
-			if(a.dataset.ms_elapsed > b.dataset.ms_elapsed) {
+			if(parseFloat(a.dataset.ms_elapsed) > parseFloat(b.dataset.ms_elapsed)) {
 				return -1;
 			}
 			return 0;
@@ -20,7 +20,7 @@
 
 		var ordinalSort = function(a, b){
 			console.log('a', a.dataset.count, 'b', b.dataset.count);
-			if( parseInt(a.dataset.count) > parseInt(b.dataset.count)) {
+			if(parseInt(a.dataset.count) > parseInt(b.dataset.count)) {
 				return 1;
 			}
 			if(parseInt(a.dataset.count) < parseInt(b.dataset.count)) {
