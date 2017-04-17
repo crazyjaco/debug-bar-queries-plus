@@ -8,18 +8,22 @@
 		//sortBy.addEventListener('change', function(event){console.log(event);}, false);
 
 		var elapsedSort = function(a, b){
+			parsedA = parseFloat(a.dataset.ms_elapsed.replace(/,/g, ''));
+			parsedB = parseFloat(b.dataset.ms_elapsed.replace(/,/g, ''));
 			//console.log('a', parseFloat(a.dataset.ms_elapsed), 'b', parseFloat(b.dataset.ms_elapsed));
-			if(parseFloat(a.dataset.ms_elapsed)  < parseFloat(b.dataset.ms_elapsed)) {
+			if(parsedA < parsedB) {
 				return 1;
 			}
-			if(parseFloat(a.dataset.ms_elapsed) > parseFloat(b.dataset.ms_elapsed)) {
+			if(parsedA > parsedB) {
 				return -1;
 			}
 			return 0;
 		}
 
 		var ordinalSort = function(a, b){
-			console.log('a', a.dataset.count, 'b', b.dataset.count);
+			parsedA = parseInt(a.dataset.count.replace(/,/g, ''));
+			parsedB = parseInt(b.dataset.count.replace(/,/g, ''));
+			//console.log('a', a.dataset.count, 'b', b.dataset.count);
 			if(parseInt(a.dataset.count) > parseInt(b.dataset.count)) {
 				return 1;
 			}
