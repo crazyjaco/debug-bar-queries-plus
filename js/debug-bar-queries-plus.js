@@ -1,12 +1,6 @@
 (function(jQuery){
 	jQuery(document).ready( function(){
 
-		console.log('shit', jQuery('select#dbqp-sort-by') );
-
-		//var sortBy = document.getElementById('dbqp-sort-by');
-		//sortBy.addEventListener('change', sortHandler.bind(this), false);
-		//sortBy.addEventListener('change', function(event){console.log(event);}, false);
-
 		var elapsedSort = function(a, b){
 			parsedA = parseFloat(a.dataset.ms_elapsed.replace(/,/g, ''));
 			parsedB = parseFloat(b.dataset.ms_elapsed.replace(/,/g, ''));
